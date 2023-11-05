@@ -1,0 +1,36 @@
+.beforeMain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px;
+  &__button{
+    height: 30px;
+    padding:0 30px;
+    border: 2px solid $Black;
+    background-color: $white;
+
+    &:hover{
+      cursor: pointer;
+      background-color: $Black;
+      color: $white;
+      transition: ease-in-out .3s ;
+    }
+  }
+}
+.main__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &--li{
+    position: relative;
+    padding: 10px;
+    
+  }
+  &--text{
+    position: absolute;
+    bottom: -10px;
+    left: 45px;
+    font-size: 38px;
+    color: $white;
+  }
+}

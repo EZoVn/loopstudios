@@ -1,0 +1,15 @@
+// Import
+@import 'variables';
+@import "normalize";
+
+// Section
+@import "header";
+@import 'section';
+@import 'main';
+@import 'footer';
+
+*{
+  // font-family: $alata;
+  font-family: $josefin;
+  font-size: $FontSize;
+}

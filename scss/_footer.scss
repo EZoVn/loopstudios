@@ -1,0 +1,24 @@
+.footer {
+  padding: 20px;
+  color: $white;
+  background-color: $Black;
+  &__logo {
+    display: flex;
+    justify-content: space-between;
+    & img {
+      width: 100px;
+      padding: 5px;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    &--ul {
+      display: flex;
+      padding-left: 0px;
+      & li {
+        margin: 0 5px;
+      }
+    }
+  }
+}
