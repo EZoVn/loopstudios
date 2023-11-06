@@ -29,11 +29,12 @@
     </header>
     <section class="section">
       <div class="section__left">
-        <img
-          class="section__left--img"
-          src="./images/desktop/image-interactive.jpg"
-          alt="photo de quelqu'un avec un casque VR"
-        />
+        <picture>
+          <source media="(max-width: 480px)" srcset="./images/mobile/image-interactive.jpg" />
+          <source media="(min-width: 481px)" srcset="./images/desktop/image-interactive.jpg" />
+          <img src="./images/desktop/image-interactive.jpg" alt="photo de quelqu'un avec un casque VR">
+        </picture>
+
       </div>
       <div class="section__right">
         <h2 class="section__right--title">The leader in interactive VR</h2>
@@ -52,75 +53,67 @@
     <main class="main">
       <ul class="main__list">
         <li class="main__list--li">
-          <img
-            class="main__list--img"
-            src="./images/desktop/image-deep-earth.jpg"
-            alt="deep earth"
-            srcset=""
-          />
+          <picture>
+            <source media="(max-width: 480px)" srcset="./images/mobile/image-deep-earth.jpg" />
+            <source media="(min-width: 481px)" srcset="./images/desktop/image-deep-earth.jpg" />
+            <img src="./images/desktop/image-deep-earth.jpg" alt="">
+          </picture>
           <p class="main__list--text">Deep earth</p>
         </li>
         <li class="main__list--li">
-          <img
-            class="main__list--img"
-            src="./images/desktop/image-night-arcade.jpg"
-            alt="Night arcade"
-            srcset=""
-          />
+          <picture>
+            <source media="(max-width: 480px)" srcset="./images/mobile/image-night-arcade.jpg" />
+            <source media="(min-width: 481px)" srcset="./images/desktop/image-night-arcade.jpg" />
+            <img src="./images/desktop/image-night-arcade.jpg" alt="">
+          </picture>
           <p class="main__list--text">Night arcade</p>
         </li>
         <li class="main__list--li">
-          <img
-            class="main__list--img"
-            src="./images/desktop/image-soccer-team.jpg"
-            alt="soccer team vr"
-            srcset=""
-          />
+          <picture>
+            <source media="(max-width: 480px)" srcset="./images/mobile/image-soccer-team.jpg" />
+            <source media="(min-width: 481px)" srcset="./images/desktop/image-soccer-team.jpg" />
+            <img src="./images/desktop/image-soccer-team.jpg" alt="">
+          </picture>
           <p class="main__list--text">Soccer team VR</p>
         </li>
         <li class="main__list--li">
-          <img
-            class="main__list--img"
-            src="./images/desktop/image-grid.jpg"
-            alt="the grid"
-            srcset=""
-          />
+          <picture>
+            <source media="(max-width: 480px)" srcset="./images/mobile/image-grid.jpg" />
+            <source media="(min-width: 481px)" srcset="./images/desktop/image-grid.jpg" />
+            <img src="./images/desktop/image-grid.jpg" alt="image grid">
+          </picture>
           <p class="main__list--text">The grid</p>
         </li>
         <li class="main__list--li">
-          <img
-            class="main__list--img"
-            src="./images/desktop/image-from-above.jpg"
-            alt="from up above vr "
-            srcset=""
-          />
+          <picture>
+            <source media="(max-width: 480px)" srcset="./images/mobile/image-from-above.jpg" />
+            <source media="(min-width: 481px)" srcset="./images/desktop/image-from-above.jpg" />
+            <img src="./images/desktop/image-from-above.jpg" alt="image from above">
+          </picture>
           <p class="main__list--text">From up above VR</p>
         </li>
         <li class="main__list--li">
-          <img
-            class="main__list--img"
-            src="./images/desktop/image-pocket-borealis.jpg"
-            alt=" pocket borealis"
-            srcset=""
-          />
+          <picture>
+            <source media="(max-width: 480px)" srcset="./images/mobile/image-pocket-borealis.jpg" />
+            <source media="(min-width: 481px)" srcset="./images/desktop/image-pocket-borealis.jpg" />
+            <img src="./images/desktop/image-pocket-borealis.jpg" alt="Auror Borealis">
+          </picture>
           <p class="main__list--text">Pocket borealis</p>
         </li>
         <li class="main__list--li">
-          <img
-            class="main__list--img"
-            src="./images/desktop/image-curiosity.jpg"
-            alt="the curiosity"
-            srcset=""
-          />
+          <picture>
+            <source media="(max-width: 480px)" srcset="./images/mobile/image-curiosity.jpg" />
+            <source media="(min-width: 481px)" srcset="./images/desktop/image-curiosity.jpg" />
+            <img src="./images/desktop/image-curiosity.jpg" alt="">
+          </picture>
           <p class="main__list--text">The curiosity</p>
         </li>
         <li class="main__list--li">
-          <img
-            class="main__list--img"
-            src="./images/desktop/image-fisheye.jpg"
-            alt="make it fisheye"
-            srcset=""
-          />
+          <picture>
+            <source media="(max-width: 480px)" srcset="./images/mobile/image-fisheye.jpg" />
+            <source media="(min-width: 481px)" srcset="./images/desktop/image-fisheye.jpg" />
+            <img src="./images/desktop/image-fisheye.jpg" alt="">
+          </picture>
           <p class="main__list--text">Make it fisheye</p>
         </li>
       </ul>
@@ -148,8 +141,8 @@
     </footer>
 
     <script
-    src="https://kit.fontawesome.com/205d2d4b64.js"
-    crossorigin="anonymous"
-  ></script>
+      src="https://kit.fontawesome.com/205d2d4b64.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
