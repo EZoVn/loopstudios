@@ -353,6 +353,15 @@ a {
 .main__list--li {
   position: relative;
   padding: 10px;
+  transition: 0.3s ease;
+}
+.main__list--li:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+.main__list--li:hover p {
+  opacity: 1;
+  color: hsl(0, 0%, 0%);
 }
 .main__list--text {
   position: absolute;
@@ -360,6 +369,7 @@ a {
   left: 45px;
   font-size: 38px;
   color: hsl(0, 0%, 100%);
+  transition: ease 0.3s;
 }
 
 .footer {
@@ -375,6 +385,11 @@ a {
   width: 100px;
   padding: 5px;
 }
+.footer__logo--reseau i:hover {
+  cursor: pointer;
+  padding-bottom: 4px;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+}
 .footer__list {
   display: flex;
   justify-content: space-between;
@@ -384,7 +399,21 @@ a {
   padding-left: 0px;
 }
 .footer__list--ul li {
+  position: relative;
   margin: 0 5px;
+}
+.footer__list--ul li::before {
+  content: "";
+  width: 0%; /* Largeur de la bordure (50% de la largeur du texte) */
+  height: 2px; /* Épaisseur de la bordure */
+  background-color: hsl(0, 0%, 100%); /* Couleur de la bordure au survol */
+  position: absolute;
+  bottom: -7px;
+  left: 25%; /* Centrage de la bordure (50% de (100% - 50%) de la largeur) */
+}
+.footer__list--ul li:hover::before {
+  cursor: pointer;
+  width: 50%;
 }
 
 * {

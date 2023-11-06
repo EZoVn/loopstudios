@@ -24,7 +24,15 @@
   &--li{
     position: relative;
     padding: 10px;
-    
+    transition: .3s ease;
+    &:hover{
+      cursor: pointer;
+      opacity: 0.6;
+      & p{
+        opacity: 1;
+        color: $Black;
+      }
+    }
   }
   &--text{
     position: absolute;
@@ -32,5 +40,9 @@
     left: 45px;
     font-size: 38px;
     color: $white;
+    transition: ease .3s;
+    // &:hover{
+    //   color: $Black;
+    // }
   }
 }

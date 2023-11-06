@@ -9,6 +9,11 @@
       width: 100px;
       padding: 5px;
     }
+    &--reseau i:hover{
+        cursor: pointer;
+        padding-bottom: 4px;
+        border-bottom: 1px solid $white;
+      }
   }
   &__list {
     display: flex;
@@ -17,7 +22,22 @@
       display: flex;
       padding-left: 0px;
       & li {
+        position: relative;
         margin: 0 5px;
+        &::before {
+          content: "";
+          width: 0%; /* Largeur de la bordure (50% de la largeur du texte) */
+          height: 2px; /* Épaisseur de la bordure */
+          background-color: $white; /* Couleur de la bordure au survol */
+          position: absolute;
+          bottom: -7px;
+          left: 25%; /* Centrage de la bordure (50% de (100% - 50%) de la largeur) */
+          // transition: width 0.3s;
+        }
+        &:hover::before {
+          cursor: pointer;
+          width: 50%;
+        }
       }
     }
   }
