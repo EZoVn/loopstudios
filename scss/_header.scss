@@ -41,3 +41,24 @@
     margin: 40px;
   }
 }
+.hamburger, .close{
+  display: none;
+  width: 15px;
+  height: 15px;
+}
+.header__nav--hamburger{
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 680px) {
+  .header{
+    background-image: url("/loopstudios-landing-page-main/images/mobile/image-hero.jpg");
+    height: 500px;
+  }
+  .hamburger{
+    display: block;
+  }
+  .header__nav--menu{
+    display: none;
+  }
+}
