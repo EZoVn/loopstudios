@@ -434,6 +434,21 @@ a {
   transition: ease 0.3s;
 }
 
+@media (max-width: 680px) {
+  .main__list {
+    padding: 0;
+  }
+  .main__list li img {
+    max-width: 100%;
+  }
+  .beforeMain__button {
+    position: absolute;
+    top: calc(380% + 2em);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 2em;
+  }
+}
 .footer {
   padding: 20px;
   color: hsl(0, 0%, 100%);
