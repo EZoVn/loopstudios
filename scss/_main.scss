@@ -41,6 +41,7 @@
     font-size: 38px;
     color: $white;
     transition: ease .3s;
+    text-transform: uppercase;
     // &:hover{
     //   color: $Black;
     // }
@@ -54,6 +55,8 @@
       max-width: 100%;
     }
   }
+
+  // En developpement
   .beforeMain__button{
     position: absolute;
     top: calc(380% + 2em);

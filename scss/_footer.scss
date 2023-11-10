@@ -26,12 +26,12 @@
         margin: 0 5px;
         &::before {
           content: "";
-          width: 0%; /* Largeur de la bordure (50% de la largeur du texte) */
-          height: 2px; /* Épaisseur de la bordure */
-          background-color: $white; /* Couleur de la bordure au survol */
+          width: 0%;
+          height: 2px;
+          background-color: $white;
           position: absolute;
           bottom: -7px;
-          left: 25%; /* Centrage de la bordure (50% de (100% - 50%) de la largeur) */
+          left: 25%;
           // transition: width 0.3s;
         }
         &:hover::before {
@@ -41,4 +41,14 @@
       }
     }
   }
+}
+
+@media (max-width: 680px) {
+  .footer{
+    &__list ul{
+      flex-direction: column;
+
+    }
+  }
+  
 }

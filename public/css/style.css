@@ -318,12 +318,20 @@ a {
     background-image: url("/loopstudios-landing-page-main/images/mobile/image-hero.jpg");
     height: 500px;
   }
+  .header__title {
+    width: 100%;
+    max-width: 100%;
+  }
   .hamburger {
     display: block;
   }
   .header__nav--menu {
     display: none;
     padding: 70px 0 0 10px;
+  }
+  .header__nav--menu li a {
+    font-size: 28px;
+    text-transform: uppercase;
   }
   .active {
     display: block;
@@ -388,6 +396,27 @@ a {
   color: hsl(0, 0%, 55%);
 }
 
+@media (max-width: 680px) {
+  .section {
+    margin: 20px 20px 50px 20px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .section__left img {
+    max-width: 100%;
+  }
+  .section__right {
+    padding: 30px;
+    position: static;
+    width: 80%;
+  }
+  .section__right--title {
+    text-transform: uppercase;
+  }
+}
 .beforeMain {
   display: flex;
   justify-content: space-between;
@@ -432,6 +461,7 @@ a {
   font-size: 38px;
   color: hsl(0, 0%, 100%);
   transition: ease 0.3s;
+  text-transform: uppercase;
 }
 
 @media (max-width: 680px) {
@@ -481,18 +511,23 @@ a {
 }
 .footer__list--ul li::before {
   content: "";
-  width: 0%; /* Largeur de la bordure (50% de la largeur du texte) */
-  height: 2px; /* Épaisseur de la bordure */
-  background-color: hsl(0, 0%, 100%); /* Couleur de la bordure au survol */
+  width: 0%;
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
   position: absolute;
   bottom: -7px;
-  left: 25%; /* Centrage de la bordure (50% de (100% - 50%) de la largeur) */
+  left: 25%;
 }
 .footer__list--ul li:hover::before {
   cursor: pointer;
   width: 50%;
 }
 
+@media (max-width: 680px) {
+  .footer__list ul {
+    flex-direction: column;
+  }
+}
 * {
   font-family: "Josefin Sans", sans-serif;
   font-size: 15px;

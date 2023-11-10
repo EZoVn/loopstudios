@@ -55,6 +55,10 @@
   .header{
     background-image: url("/loopstudios-landing-page-main/images/mobile/image-hero.jpg");
     height: 500px;
+    &__title{
+      width: 100%;
+      max-width: 100%;
+    }
   }
   .hamburger{
     display: block;
@@ -62,6 +66,10 @@
   .header__nav--menu{
     display: none;
     padding: 70px 0 0 10px;
+    & li a{
+      font-size: 28px;
+      text-transform: uppercase;
+    }
   }
   .active{
     display: block;
