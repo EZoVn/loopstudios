@@ -2,22 +2,35 @@
   padding: 20px;
   color: $white;
   background-color: $Black;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
+
   &__logo {
     display: flex;
     justify-content: space-between;
-    & img {
+    &--img {
+      grid-column: 1/2;
+      grid-row: 1;
+
       width: 100px;
       padding: 5px;
     }
-    &--reseau i:hover{
+    &--reseau{
+      grid-column: 2/3;
+      grid-row: 1;
+      justify-self: end;
+      & i:hover{
         cursor: pointer;
         padding-bottom: 4px;
         border-bottom: 1px solid $white;
       }
+      }
   }
   &__list {
-    display: flex;
-    justify-content: space-between;
+    grid-column: 1/2;
+    grid-row: 2;
     &--ul {
       display: flex;
       padding-left: 0px;
@@ -41,14 +54,22 @@
       }
     }
   }
+  &__copyright{
+    grid-column: 2/3;
+    grid-row: 2;
+    justify-self: end;
+  }
 }
 
-@media (max-width: 680px) {
+@media screen and (max-width: 680px) {
   .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     &__list ul{
       flex-direction: column;
-
+      align-items: center;
     }
   }
-  
 }
