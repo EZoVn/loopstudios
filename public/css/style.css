@@ -483,13 +483,6 @@ a {
     margin: 10px 43px;
     justify-content: center;
   }
-  .beforeMain__button {
-    position: absolute;
-    top: calc(380% + 2em);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 2em;
-  }
 }
 .footer {
   padding: 20px;
