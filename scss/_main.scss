@@ -57,12 +57,14 @@
   .beforeMain {
     margin: 10px 43px;
     justify-content: center;
-    // &__button {
-    //   position: absolute;
-    //   top: calc(380% + 2em);
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    //   margin-top: 2em;
-    // }
+    
+  }
+
+  // Div de la version desktop
+  .divBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
   }
 }

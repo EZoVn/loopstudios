@@ -483,6 +483,12 @@ a {
     margin: 10px 43px;
     justify-content: center;
   }
+  .divBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
 }
 .footer {
   padding: 20px;

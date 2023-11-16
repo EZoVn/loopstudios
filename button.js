@@ -1,26 +1,32 @@
 const beforeMain = document.querySelector(".beforeMain");
 const btnSeeAll = document.getElementById("btnSeeAll");
-const footer = document.querySelector(".footer");
+const main = document.querySelector(".main");
+const divBtn = document.createElement("div");
+divBtn.className = "divBtn";
 
 
 window.addEventListener("load", () => {
   if (window.innerWidth <= 680) {
+
     beforeMain.removeChild(btnSeeAll);
-    footer.insertBefore(btnSeeAll, footer)
-    // Code à exécuter lorsque la fenêtre est de 680 pixels ou moins
+    main.append(divBtn);
+    divBtn.append(btnSeeAll);
   } else {
+    main.removeChild(divBtn);
+    beforeMain.append(btnSeeAll);
+
     console.log('Il y a une erreur')
-    // Code à exécuter lorsque la fenêtre est plus large que 680 pixels
   }
 
   window.addEventListener('resize', () => {
     if (window.innerWidth <= 680) {
       beforeMain.removeChild(btnSeeAll);
-      footer.insertBefore(btnSeeAll)
-      // Code à exécuter lorsque la fenêtre est de 680 pixels ou moins
+      main.append(divBtn);
+      div.append(btnSeeAll);
     } else {
+      main.removeChild(divBtn);
+      beforeMain.append(btnSeeAll);
       console.log('Il y a une erreur')
-      // Code à exécuter lorsque la fenêtre est plus large que 680 pixels
     }
   });
 });
