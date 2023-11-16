@@ -14,11 +14,9 @@ window.addEventListener("load", () => {
 
   window.addEventListener("resize", () => {
     if (window.innerWidth <= 680) {
-      if (!divBtn.contains(btnSeeAll)) {
-        beforeMain.removeChild(btnSeeAll);
-        main.append(divBtn);
-        divBtn.append(btnSeeAll);
-      }
+      beforeMain.removeChild(btnSeeAll);
+      main.append(divBtn);
+      div.append(btnSeeAll);
     } else {
       if (!beforeMain.contains(btnSeeAll)) {
         divBtn.removeChild(btnSeeAll);
