@@ -1,6 +1,7 @@
 .header {
   font-family: $alata;
-  background-image: url("/loopstudios-landing-page-main/images/desktop/image-hero.jpg");
+  // Ajout du chemin pour la version du site en ligne sinon il ne trouve pas l'image du bakcground
+  background-image: url("./loopstudios-landing-page-main/images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
@@ -41,24 +42,26 @@
     margin: 40px;
   }
 }
-.hamburger, .close{
+.hamburger,
+.close {
   cursor: pointer;
   display: none;
   width: 15px;
   height: 15px;
 }
-.header__nav--hamburger{
+.header__nav--hamburger {
   display: flex;
   align-items: center;
 }
 @media screen and (max-width: 680px) {
-  .header{
-    background-image: url("/loopstudios-landing-page-main/images/mobile/image-hero.jpg");
+  .header {
+    // Ajout du chemin pour la version du site en ligne sinon il ne trouve pas l'image du bakcground
+    background-image: url("./loopstudios-landing-page-main/images/mobile/image-hero.jpg");
     height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    &--title{
+    &--title {
       width: 80%;
       padding: 20px;
       font-size: 54px;
@@ -67,29 +70,29 @@
       align-self: center;
     }
   }
-  .hamburger{
+  .hamburger {
     display: block;
   }
-  .header__nav--menu{
+  .header__nav--menu {
     display: none;
     padding: 70px 0 0 10px;
-    & li a{
+    & li a {
       font-size: 28px;
       text-transform: uppercase;
     }
   }
-  .active{
+  .active {
     display: block;
     z-index: 6;
   }
-  .hidden{
+  .hidden {
     display: none;
   }
 }
-.header__nav--img{
+.header__nav--img {
   z-index: 6;
 }
-.navActive{
+.navActive {
   padding: 20px;
   position: fixed;
   top: 0;
@@ -102,11 +105,11 @@
   align-items: start;
   justify-content: start;
   z-index: 5;
-  & li{
+  & li {
     padding: 20px 0;
   }
 }
-.close{
+.close {
   position: fixed;
   top: 25px;
   right: 20px;

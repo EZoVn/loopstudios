@@ -260,7 +260,7 @@ a {
 
 .header {
   font-family: "Alata", sans-serif;
-  background-image: url("/loopstudios-landing-page-main/images/desktop/image-hero.jpg");
+  background-image: url("./loopstudios-landing-page-main/images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
@@ -301,7 +301,8 @@ a {
   margin: 40px;
 }
 
-.hamburger, .close {
+.hamburger,
+.close {
   cursor: pointer;
   display: none;
   width: 15px;
@@ -315,7 +316,7 @@ a {
 
 @media screen and (max-width: 680px) {
   .header {
-    background-image: url("/loopstudios-landing-page-main/images/mobile/image-hero.jpg");
+    background-image: url("./loopstudios-landing-page-main/images/mobile/image-hero.jpg");
     height: 800px;
     display: flex;
     flex-direction: column;
