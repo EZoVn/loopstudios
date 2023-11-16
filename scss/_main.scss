@@ -1,48 +1,70 @@
-.beforeMain{
+.beforeMain {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 50px;
-  &__button{
+  &__button {
     height: 30px;
-    padding:0 30px;
+    padding: 0 30px;
     border: 2px solid $Black;
     background-color: $white;
 
-    &:hover{
+    &:hover {
       cursor: pointer;
       background-color: $Black;
       color: $white;
-      transition: ease-in-out .3s ;
+      transition: ease-in-out 0.3s;
     }
   }
 }
-.main__list{
+.main__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  &--li{
+  &--li {
     position: relative;
     padding: 10px;
-    transition: .3s ease;
-    &:hover{
+    transition: 0.3s ease;
+    &:hover {
       cursor: pointer;
       opacity: 0.4;
-      & p{
+      & p {
         opacity: 1;
         color: $Black;
       }
     }
   }
-  &--text{
+  &--text {
     position: absolute;
     bottom: -10px;
     left: 45px;
     font-size: 38px;
     color: $white;
-    transition: ease .3s;
-    // &:hover{
-    //   color: $Black;
-    // }
+    transition: ease 0.3s;
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .main__list {
+    padding: 0;
+    & li img {
+      max-width: 100%;
+    }
+  }
+
+  // En developpement
+  .beforeMain {
+    margin: 10px 43px;
+    justify-content: center;
+    
+  }
+
+  // Div de la version desktop
+  .divBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
   }
 }

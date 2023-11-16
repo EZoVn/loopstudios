@@ -11,28 +11,40 @@
     position: absolute;
     bottom: -5%;
     right: -10%;
-    width: 40%; /* Définissez la largeur de débordement à 80% */
+    width: 40%; 
     height: 30%;
     background-color: $white;
     &--title {
       font-size: 28px;
       color: $Black;
+      
     }
     &--text {
       color: $DarkGray;
     }
   }
 }
+@media screen and (max-width: 680px) {
+  .section{ 
+    margin: 10px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    &__left img{
+      max-width: 100%;
+    }
+    &__right{
+      padding: 10px;
+      position:static;
+      width: 90%;
+      &--title{
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+  
+  }
 
-// @media (min-width: 768px) {
-//   .section__left--img[srcset*="./images/mobile/image-curiosity.jpg"]{
-//     display: none;
-//   }
-
-// }
-// @media (max-width: 769px) {
-//   .section__left--img[srcset*="./images/desktop/image-interactive.jpg"]{
-//     display: none;
-//   }
-
-// }
+}

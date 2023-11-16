@@ -302,6 +302,7 @@ a {
 }
 
 .hamburger, .close {
+  cursor: pointer;
   display: none;
   width: 15px;
   height: 15px;
@@ -312,18 +313,71 @@ a {
   align-items: center;
 }
 
-@media (max-width: 680px) {
+@media screen and (max-width: 680px) {
   .header {
     background-image: url("/loopstudios-landing-page-main/images/mobile/image-hero.jpg");
-    height: 500px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .header--title {
+    width: 80%;
+    padding: 20px;
+    font-size: 54px;
+    max-width: 100%;
+    margin: 0 0 250px 0px;
+    align-self: center;
   }
   .hamburger {
     display: block;
   }
   .header__nav--menu {
     display: none;
+    padding: 70px 0 0 10px;
+  }
+  .header__nav--menu li a {
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+  .active {
+    display: block;
+    z-index: 6;
+  }
+  .hidden {
+    display: none;
   }
 }
+.header__nav--img {
+  z-index: 6;
+}
+
+.navActive {
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(0, 0%, 0%);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  z-index: 5;
+}
+.navActive li {
+  padding: 20px 0;
+}
+
+.close {
+  position: fixed;
+  top: 25px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+}
+
 .section {
   margin: 50px 50px 100px 50px;
   position: relative;
@@ -337,7 +391,7 @@ a {
   position: absolute;
   bottom: -5%;
   right: -10%;
-  width: 40%; /* Définissez la largeur de débordement à 80% */
+  width: 40%;
   height: 30%;
   background-color: hsl(0, 0%, 100%);
 }
@@ -349,6 +403,28 @@ a {
   color: hsl(0, 0%, 55%);
 }
 
+@media screen and (max-width: 680px) {
+  .section {
+    margin: 10px;
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .section__left img {
+    max-width: 100%;
+  }
+  .section__right {
+    padding: 10px;
+    position: static;
+    width: 90%;
+  }
+  .section__right--title {
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
 .beforeMain {
   display: flex;
   justify-content: space-between;
@@ -393,20 +469,50 @@ a {
   font-size: 38px;
   color: hsl(0, 0%, 100%);
   transition: ease 0.3s;
+  text-transform: uppercase;
 }
 
+@media screen and (max-width: 680px) {
+  .main__list {
+    padding: 0;
+  }
+  .main__list li img {
+    max-width: 100%;
+  }
+  .beforeMain {
+    margin: 10px 43px;
+    justify-content: center;
+  }
+  .divBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+}
 .footer {
   padding: 20px;
   color: hsl(0, 0%, 100%);
   background-color: hsl(0, 0%, 0%);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  align-items: center;
 }
 .footer__logo {
   display: flex;
   justify-content: space-between;
 }
-.footer__logo img {
+.footer__logo--img {
+  grid-column: 1/2;
+  grid-row: 1;
   width: 100px;
   padding: 5px;
+}
+.footer__logo--reseau {
+  grid-column: 2/3;
+  grid-row: 1;
+  justify-self: end;
 }
 .footer__logo--reseau i:hover {
   cursor: pointer;
@@ -414,8 +520,8 @@ a {
   border-bottom: 1px solid hsl(0, 0%, 100%);
 }
 .footer__list {
-  display: flex;
-  justify-content: space-between;
+  grid-column: 1/2;
+  grid-row: 2;
 }
 .footer__list--ul {
   display: flex;
@@ -427,18 +533,35 @@ a {
 }
 .footer__list--ul li::before {
   content: "";
-  width: 0%; /* Largeur de la bordure (50% de la largeur du texte) */
-  height: 2px; /* Épaisseur de la bordure */
-  background-color: hsl(0, 0%, 100%); /* Couleur de la bordure au survol */
+  width: 0%;
+  height: 2px;
+  background-color: hsl(0, 0%, 100%);
   position: absolute;
   bottom: -7px;
-  left: 25%; /* Centrage de la bordure (50% de (100% - 50%) de la largeur) */
+  left: 25%;
 }
 .footer__list--ul li:hover::before {
   cursor: pointer;
   width: 50%;
 }
+.footer__copyright {
+  grid-column: 2/3;
+  grid-row: 2;
+  justify-self: end;
+}
 
+@media screen and (max-width: 680px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer__list ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 * {
   font-family: "Josefin Sans", sans-serif;
   font-size: 15px;
