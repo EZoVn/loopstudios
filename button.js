@@ -14,13 +14,16 @@ window.addEventListener("load", () => {
 
   window.addEventListener("resize", () => {
     if (window.innerWidth <= 680) {
-      beforeMain.removeChild(btnSeeAll);
-      main.append(divBtn);
-      div.append(btnSeeAll);
+      if (!divBtn.contains(btnSeeAll)) {
+        beforeMain.removeChild(btnSeeAll);
+        main.append(divBtn);
+        divBtn.append(btnSeeAll);
+      }
     } else {
       if (!beforeMain.contains(btnSeeAll)) {
         divBtn.removeChild(btnSeeAll);
-        beforeMain.append(btnSeeAll);
+        main.removeChild(divBtn);
+        beforeMain.append(btnSeeAll);        
       }
     }
   });
