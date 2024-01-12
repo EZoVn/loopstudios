@@ -152,7 +152,8 @@ textarea {
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-input { /* 1 */
+input {
+  /* 1 */
   overflow: visible;
 }
 
@@ -160,7 +161,8 @@ input { /* 1 */
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -260,7 +262,7 @@ a {
 
 .header {
   font-family: "Alata", sans-serif;
-  background-image: url("../../images/desktop/image-hero.jpg");
+  background-image: url("/loopstudios-landing-page-main/images/desktop/image-hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 350px;
@@ -314,9 +316,16 @@ a {
   align-items: center;
 }
 
+.btnSeeAll {
+  color: rgb(0, 0, 0);
+}
+.btnSeeAll:hover {
+  color: white;
+}
+
 @media screen and (max-width: 680px) {
   .header {
-    background-image: url("../../images/mobile/image-hero.jpg");
+    background-image: url("/loopstudios-landing-page-main/images/mobile/image-hero.jpg");
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -386,6 +395,7 @@ a {
 .section__left {
   object-fit: cover;
   align-self: flex-start;
+  width: 100%;
 }
 .section__right {
   padding: 50px;
@@ -448,7 +458,7 @@ a {
 .main__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 .main__list--li {
   position: relative;

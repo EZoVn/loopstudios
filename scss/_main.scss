@@ -20,7 +20,7 @@
 .main__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   &--li {
     position: relative;
     padding: 10px;
@@ -57,11 +57,10 @@
   .beforeMain {
     margin: 10px 43px;
     justify-content: center;
-    
   }
 
   // Div de la version desktop
-  .divBtn{
+  .divBtn {
     display: flex;
     justify-content: center;
     align-items: center;
